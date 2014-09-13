@@ -1,3 +1,7 @@
+## v1.0.5
+
+ * Remove Travis badge from README
+
 ## v1.0.4
 
  * Ditch Travis conf
