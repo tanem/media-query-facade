@@ -15,7 +15,7 @@ $ npm install media-query-facade --save
 ## Example
 
 ```js
-var MQFacade = require('../lib/media-query-facade');
+var MQFacade = require('media-query-facade');
 
 var mq = new MQFacade({
   small: 'only screen and (max-width: 480px)',
