@@ -1,7 +1,7 @@
 {
   "name": "media-query-facade",
-  "version": "1.0.5",
-  "description": "A nicer media query API.",
+  "version": "1.0.6",
+  "description": "A nicer JavaScript media query API.",
   "main": "index.js",
   "homepage": "https://github.com/tanem/media-query-facade",
   "bugs": {
