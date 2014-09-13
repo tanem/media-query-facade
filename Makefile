@@ -1,5 +1,3 @@
-REPORTER=spec
-
 lint:
 	@./node_modules/.bin/jshint ./lib/*.js ./test/*.js ./example/main.js index.js
 
@@ -10,8 +8,8 @@ test:
 test-cov:
 	@$(MAKE) lint
 	@./node_modules/.bin/browserify -t coverify test/media-query-facade.test.js \
-	  | ./node_modules/.bin/testling \
-	  | ./node_modules/.bin/coverify
+		| ./node_modules/.bin/testling \
+		| ./node_modules/.bin/coverify
 
 example:
 	@$(MAKE) lint

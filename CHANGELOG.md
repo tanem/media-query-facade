@@ -1,3 +1,7 @@
+## v1.0.7
+
+ * Decruft
+
 ## v1.0.6
 
  * Update README
