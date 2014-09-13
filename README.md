@@ -1,7 +1,7 @@
 # media-query-facade
 
 [![Build Status](https://travis-ci.org/tanem/media-query-facade.png?branch=master)](https://travis-ci.org/tanem/media-query-facade)
-[![NPM version](https://badge.fury.io/js/media-query-facade.svg)](http://badge.fury.io/js/media-query-facade)
+[![NPM version](https://badge.fury.io/js/media-query-facade.svg)](http://badge.fury.io/js/media-query-facade)  
 [![browser support](https://ci.testling.com/tanem/media-query-facade.png)](https://ci.testling.com/tanem/media-query-facade)
 
 Do stuff when the media queries on a document change. For efficiency it uses [window.matchMedia](https://developer.mozilla.org/en-US/docs/Web/API/Window.matchMedia) under the hood.
