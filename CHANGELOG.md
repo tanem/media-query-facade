@@ -1,3 +1,7 @@
+## v1.0.4
+
+ * Ditch Travis conf
+
 ## v1.0.3
 
  * Update README
