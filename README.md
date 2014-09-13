@@ -6,13 +6,11 @@
 
 Do stuff when the media queries on a document change. For efficiency it uses [window.matchMedia](https://developer.mozilla.org/en-US/docs/Web/API/Window.matchMedia) under the hood.
 
-
 ## Installation
 
 ```sh
 $ npm install media-query-facade --save
 ```
-
 
 ## Example
 
@@ -41,7 +39,6 @@ There is also an example which uses [browserify](http://browserify.org) to make 
 ```sh
 $ make example
 ```
-
 
 ## API
 
@@ -96,7 +93,6 @@ Remove a `callback` with a `context` for a `query` or alias:
 mq.off('(max-width: 400px)', function(){}, {});
 ```
 
-
 ## Testing
 
 ```sh
@@ -108,7 +104,6 @@ To generate a coverage report:
 ```sh
 $ make test-cov
 ```
-
 
 ## Credits
 
