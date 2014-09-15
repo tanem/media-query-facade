@@ -1,3 +1,7 @@
+## v1.0.8
+
+ * Use more explicit method names
+
 ## v1.0.7
 
  * Decruft
