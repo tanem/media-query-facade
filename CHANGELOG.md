@@ -1,3 +1,7 @@
+## v1.0.9
+
+ * Update example
+ 
 ## v1.0.8
 
  * Use more explicit method names
