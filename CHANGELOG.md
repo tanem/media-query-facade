@@ -1,3 +1,7 @@
+## v1.0.11
+
+ * Correct object name
+ 
 ## v1.0.10
 
  * Refactor retrieval of query object
