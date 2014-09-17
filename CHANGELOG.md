@@ -1,3 +1,7 @@
+## v1.0.12
+
+ * Update README
+ 
 ## v1.0.11
 
  * Correct object name

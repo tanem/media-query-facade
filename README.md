@@ -58,7 +58,7 @@ mq.registerAlias({
 
 ### mq.on(query, callback, context)
 
-Register a `callback` which will be executed with the given `context` on entry of the given `query`. Query aliases may also be used. If `context` is not specified, it will default to the `mq` instance.
+Register a `callback` which will be executed with the given `context` on entry of the given `query` or alias. If `context` is not specified, it will default to the `mq` instance.
 
 ```js
 mq.on('(max-width: 400px)', function(){});
