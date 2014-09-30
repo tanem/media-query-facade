@@ -1,3 +1,7 @@
+## v1.0.13 / 2014-10-01
+
+ * Use mkclog to generate the changelog
+
 ## v1.0.12 / 2014-09-18
 
  * Update README
