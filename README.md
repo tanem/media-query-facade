@@ -7,7 +7,7 @@ Do stuff via JavaScript when the media queries on a document change. For efficie
 
 ## Installation
 
-```sh
+```
 $ npm install media-query-facade --save
 ```
 
@@ -34,7 +34,7 @@ function changeColour(colour){
 
 There is also an example which uses [browserify](http://browserify.org) to make this work for the browser:
 
-```sh
+```
 $ make example
 ```
 
@@ -93,13 +93,13 @@ mq.off('(max-width: 400px)', function(){}, {});
 
 ## Testing
 
-```sh
+```
 $ make test
 ```
 
 To generate a coverage report:
 
-```sh
+```
 $ make test-cov
 ```
 
