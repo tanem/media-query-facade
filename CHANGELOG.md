@@ -1,3 +1,8 @@
+## v1.0.14 / 2014-10-08
+
+ * ([7d66208](https://github.com/tanem/media-query-facade/commit/7d662085b5bd49fc6695ccd85953a184ebc6a129)) Add commit links to CHANGELOG (fixes [#1](https://github.com/tanem/media-query-facade/issues/1))
+ * ([54473ad](https://github.com/tanem/media-query-facade/commit/54473ad96a8b0b5dea082328140a1281c06c6679)) Tidy up README
+
 ## v1.0.13 / 2014-10-01
 
  * ([b20f4a1](https://github.com/tanem/media-query-facade/commit/b20f4a12f7e2d833b01fb753254011beaad39722)) Use mkclog to generate the changelog
