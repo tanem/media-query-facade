@@ -1,3 +1,7 @@
+## v1.0.16 / 2014-11-27
+
+ * ([b33dc14](https://github.com/tanem/media-query-facade/commit/b33dc145b71c0dc8d17c6c8a2a597d73556ad88b)) Update README
+
 ## v1.0.15 / 2014-10-12
 
  * ([566b8d6](https://github.com/tanem/media-query-facade/commit/566b8d60286da6db7eec8650c9be11d531591f0b)) Add commit links to changelog (fixes [#1](https://github.com/tanem/media-query-facade/issues/1))
