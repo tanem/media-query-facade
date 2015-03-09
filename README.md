@@ -35,7 +35,7 @@ function changeColour(colour){
 There is also an example which uses [browserify](http://browserify.org) to make this work for the browser:
 
 ```sh
-$ make example
+$ npm run example
 ```
 
 ## API
@@ -94,13 +94,13 @@ mq.off('(max-width: 400px)', function(){}, {});
 ## Testing
 
 ```sh
-$ make test
+$ npm run test-spec
 ```
 
 To generate a coverage report:
 
 ```sh
-$ make test-cov
+$ npm run test-cov
 ```
 
 ## Credits

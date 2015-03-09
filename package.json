@@ -12,7 +12,11 @@
     "url": "git://github.com/tanem/media-query-facade.git"
   },
   "scripts": {
-    "test": "make test-cov"
+    "lint": "jshint ./lib/*.js ./test/*.js ./example/main.js index.js",
+    "test-spec": "npm run lint && testling",
+    "test-cov": "npm run lint && browserify -t coverify test/media-query-facade.test.js | testling | coverify",
+    "example": "npm run lint && browserify example/main.js > example/bundle.js && open example/index.html",
+    "test": "npm run test-cov"
   },
   "engines": {
     "node": ">= 0.10.0"
