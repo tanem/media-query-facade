@@ -1,3 +1,7 @@
+## v1.0.18 / 2015-03-12
+
+ * ([96796bd](https://github.com/tanem/media-query-facade/commit/96796bd54244c6ed7686989c33658c3ab778a8a6)) Update LICENSE
+
 ## v1.0.17 / 2015-03-09
 
  * ([c35047a](https://github.com/tanem/media-query-facade/commit/c35047a2fe63b7c215a941d347994fce1f3b1889)) Use npm scripts instead of a Makefile
