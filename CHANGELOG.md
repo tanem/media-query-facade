@@ -1,3 +1,7 @@
+## v1.0.19 / 2015-08-23
+
+ * ([b952aaa](https://github.com/tanem/media-query-facade/commit/b952aaab9057a3a73cac6de84866d779c06d95bb)) Add LICENSE information to README
+
 ## v1.0.18 / 2015-03-12
 
  * ([96796bd](https://github.com/tanem/media-query-facade/commit/96796bd54244c6ed7686989c33658c3ab778a8a6)) Update LICENSE
