@@ -106,3 +106,7 @@ $ npm run test-cov
 ## Credits
 
 A conversation with [Jacob Buck](https://github.com/jacobbuck) which sparked the idea for this module.
+
+## License
+
+MIT
