@@ -32,20 +32,20 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "browserify": "^5.11.2",
-    "coverify": "^1.0.7",
-    "jshint": "^2.5.1",
-    "tape": "^2.14.0",
-    "testling": "^1.7.0"
+    "browserify": "^11.0.1",
+    "coverify": "^1.4.1",
+    "jshint": "^2.8.0",
+    "tape": "^4.2.0",
+    "testling": "^1.7.1"
   },
   "dependencies": {
-    "lodash.bind": "^2.4.1",
-    "lodash.foreach": "^2.4.1",
-    "lodash.isobject": "^2.4.1",
-    "lodash.isstring": "^2.4.1",
-    "lodash.merge": "^2.4.1",
-    "lodash.omit": "^2.4.1",
-    "lodash.some": "^2.4.1"
+    "lodash.bind": "^3.1.0",
+    "lodash.foreach": "^3.0.3",
+    "lodash.isobject": "^3.0.2",
+    "lodash.isstring": "^3.0.1",
+    "lodash.merge": "^3.3.2",
+    "lodash.omit": "^3.1.0",
+    "lodash.some": "^3.2.3"
   },
   "testling": {
     "files": "test/media-query-facade.test.js",
