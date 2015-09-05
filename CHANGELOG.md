@@ -1,3 +1,8 @@
+## v1.0.20 / 2015-09-06
+
+ * ([96013ab](https://github.com/tanem/media-query-facade/commit/96013ab299588a20eb5b07d2f87cf471251642a8)) Update dependencies
+ * ([75db3dc](https://github.com/tanem/media-query-facade/commit/75db3dc79b7ea1871ad18a932b646433f8a8ef7d)) Add dependency status badge to README
+
 ## v1.0.19 / 2015-08-23
 
  * ([b952aaa](https://github.com/tanem/media-query-facade/commit/b952aaab9057a3a73cac6de84866d779c06d95bb)) Add LICENSE information to README
