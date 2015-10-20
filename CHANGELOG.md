@@ -1,3 +1,8 @@
+## v1.0.22 / 2015-10-21
+
+ * ([182a5b5](https://github.com/tanem/media-query-facade/commit/182a5b522925996061a4db7f238ce2859114ee96)) Add .editorconfig
+ * ([306346b](https://github.com/tanem/media-query-facade/commit/306346b57bfcbbc281b3487f24ec0e530604441e)) Update LICENSE.md
+
 ## v1.0.21 / 2015-10-21
 
  * ([24b15a2](https://github.com/tanem/media-query-facade/commit/24b15a2b86e0f6e885a03d8eadb78b598695fe09)) Tweak README intro
