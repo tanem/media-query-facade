@@ -1,12 +1,12 @@
 # media-query-facade
 
+Do stuff via JavaScript when the media queries on a document change. For efficiency it uses [window.matchMedia](https://developer.mozilla.org/en-US/docs/Web/API/Window.matchMedia) under the hood.
+
 [![NPM version](https://badge.fury.io/js/media-query-facade.svg)](http://badge.fury.io/js/media-query-facade)
 [![Dependency Status](https://david-dm.org/tanem/media-query-facade.png)](https://david-dm.org/tanem/media-query-facade)
 [![devDependency Status](https://david-dm.org/tanem/media-query-facade/dev-status.svg)](https://david-dm.org/tanem/media-query-facade#info=devDependencies)
 
 [![Sauce Test Status](https://saucelabs.com/browser-matrix/media-query-facade.svg)](https://saucelabs.com/u/media-query-facade)
-
-Do stuff via JavaScript when the media queries on a document change. For efficiency it uses [window.matchMedia](https://developer.mozilla.org/en-US/docs/Web/API/Window.matchMedia) under the hood.
 
 ## Installation
 
