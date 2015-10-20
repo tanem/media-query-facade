@@ -1,3 +1,9 @@
+## v1.0.21 / 2015-10-21
+
+ * ([24b15a2](https://github.com/tanem/media-query-facade/commit/24b15a2b86e0f6e885a03d8eadb78b598695fe09)) Tweak README intro
+ * ([023afef](https://github.com/tanem/media-query-facade/commit/023afefe4e2e646482f5f8beed51f73367c2d2ac)) Use opener to open example (fixes [#5](https://github.com/tanem/media-query-facade/issues/5))
+ * ([dce4f97](https://github.com/tanem/media-query-facade/commit/dce4f97bcfcbefddd3367bdbe5a7ae20f078fa81)) Setup browser testing with zuul (fixes [#4](https://github.com/tanem/media-query-facade/issues/4))
+
 ## v1.0.20 / 2015-09-06
 
  * ([96013ab](https://github.com/tanem/media-query-facade/commit/96013ab299588a20eb5b07d2f87cf471251642a8)) Update dependencies
