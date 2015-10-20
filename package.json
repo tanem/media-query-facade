@@ -13,13 +13,9 @@
   },
   "scripts": {
     "lint": "jshint ./lib/*.js ./test/*.js ./example/main.js index.js",
-    "test-spec": "npm run lint && testling",
-    "test-cov": "npm run lint && browserify -t coverify test/media-query-facade.test.js | testling | coverify",
-    "example": "npm run lint && browserify example/main.js > example/bundle.js && open example/index.html",
-    "test": "npm run test-cov"
-  },
-  "engines": {
-    "node": ">= 0.10.0"
+    "test-local": "npm run lint && zuul --local -- test/media-query-facade.test.js",
+    "test": "npm run lint && zuul -- test/media-query-facade.test.js",
+    "example": "npm run lint && browserify example/main.js > example/bundle.js && open example/index.html"
   },
   "keywords": [
     "media",
@@ -33,10 +29,9 @@
   "license": "MIT",
   "devDependencies": {
     "browserify": "^11.0.1",
-    "coverify": "^1.4.1",
     "jshint": "^2.8.0",
     "tape": "^4.2.0",
-    "testling": "^1.7.1"
+    "zuul": "^3.6.0"
   },
   "dependencies": {
     "lodash.bind": "^3.1.0",
@@ -46,18 +41,5 @@
     "lodash.merge": "^3.3.2",
     "lodash.omit": "^3.1.0",
     "lodash.some": "^3.2.3"
-  },
-  "testling": {
-    "files": "test/media-query-facade.test.js",
-    "browsers": [
-      "ie/latest",
-      "chrome/latest",
-      "firefox/latest",
-      "safari/latest",
-      "opera/latest",
-      "iphone/latest",
-      "ipad/latest",
-      "android-browser/latest"
-    ]
   }
 }
