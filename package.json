@@ -15,7 +15,7 @@
     "lint": "jshint ./lib/*.js ./test/*.js ./example/main.js index.js",
     "test-local": "npm run lint && zuul --local -- test/media-query-facade.test.js",
     "test": "npm run lint && zuul -- test/media-query-facade.test.js",
-    "example": "npm run lint && browserify example/main.js > example/bundle.js && open example/index.html"
+    "example": "browserify example/main.js > example/bundle.js && opener example/index.html"
   },
   "keywords": [
     "media",
@@ -30,6 +30,7 @@
   "devDependencies": {
     "browserify": "^11.0.1",
     "jshint": "^2.8.0",
+    "opener": "^1.4.1",
     "tape": "^4.2.0",
     "zuul": "^3.6.0"
   },
