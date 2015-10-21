@@ -1,36 +1,36 @@
 var test = require('tape');
 var MQFacade = require('../lib/media-query-facade');
 
-test('registration of aliases upon creation', function(t){
-  t.plan(1);
+test('registration of aliases upon creation', function(assert){
   var mq = new MQFacade({ foo: '(max-width: 400px)'});
-  t.equal(mq.aliases.foo, '(max-width: 400px)');
+  
+  assert.equal(mq.aliases.foo, '(max-width: 400px)');
+  assert.end();
 });
 
-test('registration of a single alias', function(t){
-  t.plan(1);
+test('registration of a single alias', function(assert){
   var mq = new MQFacade();
-  
+
   mq.registerAlias('foo', '(max-width: 400px)');
-  
-  t.equal(mq.aliases.foo, '(max-width: 400px)');
+
+  assert.equal(mq.aliases.foo, '(max-width: 400px)');
+  assert.end();
 });
 
-test('registration of multiple aliases', function(t){
-  t.plan(1);
+test('registration of multiple aliases', function(assert){
   var mq = new MQFacade();
   
   mq.registerAlias({ foo: '(max-width: 400px)' });
   mq.registerAlias({ bar: '(min-width: 800px)' });
   
-  t.deepEqual(mq.aliases, {
+  assert.deepEqual(mq.aliases, {
     foo: '(max-width: 400px)',
     bar: '(min-width: 800px)'
   });
+  assert.end();
 });
 
-test('registration of event handlers', function(t){
-  t.plan(1);
+test('registration of event handlers', function(assert){
   var mq = new MQFacade();
   var callbackOne = function(){};
   var callbackTwo = function(){};
@@ -38,14 +38,14 @@ test('registration of event handlers', function(t){
   mq.on('foo', callbackOne);
   mq.on('foo', callbackTwo);
     
-  t.deepEqual(mq.queries.foo.handlers, [
+  assert.deepEqual(mq.queries.foo.handlers, [
     { callback: callbackOne, context: mq },
     { callback: callbackTwo, context: mq }
   ]);
+  assert.end();
 });
 
-test('setting of the event handler callback context', function(t){
-  t.plan(1);
+test('setting of the event handler callback context', function(assert){
   var mq = new MQFacade();
   var callbackOne = function(){};
   var callbackTwo = function(){};
@@ -55,14 +55,14 @@ test('setting of the event handler callback context', function(t){
   mq.on('foo', callbackOne, contextOne);
   mq.on('foo', callbackTwo, contextTwo);
   
-  t.deepEqual(mq.queries.foo.handlers, [
+  assert.deepEqual(mq.queries.foo.handlers, [
     { callback: callbackOne, context: contextOne },
     { callback: callbackTwo, context: contextTwo }
   ]);
+  assert.end();
 });
 
-test('removal of all event handlers', function(t){
-  t.plan(1);
+test('removal of all event handlers', function(assert){
   var mq = new MQFacade();
   var callback = function(){};
   mq.on('foo', callback);
@@ -71,11 +71,11 @@ test('removal of all event handlers', function(t){
 
   mq.off();
 
-  t.looseEquals(mq.queries, {});
+  assert.looseEquals(mq.queries, {});
+  assert.end();
 });
 
-test('removal of all event handlers for a query', function(t){
-  t.plan(1);
+test('removal of all event handlers for a query', function(assert){
   var mq = new MQFacade();
   var callback = function(){};
   mq.on('foo', callback);
@@ -84,11 +84,11 @@ test('removal of all event handlers for a query', function(t){
 
   mq.off('bar');
 
-  t.equals(mq.queries.bar, undefined);
+  assert.equals(mq.queries.bar, undefined);
+  assert.end();
 });
 
-test('removal of a single handler for a query', function(t){
-  t.plan(1);
+test('removal of a single handler for a query', function(assert){
   var mq = new MQFacade();
   var callback = function(){};
   var callbackTwo = function(){};
@@ -98,13 +98,13 @@ test('removal of a single handler for a query', function(t){
 
   mq.off('bar', callback);
 
-  t.deepEqual(mq.queries.bar.handlers, [
+  assert.deepEqual(mq.queries.bar.handlers, [
     { callback: callbackTwo, context: mq }
   ]);
+  assert.end();
 });
 
-test('removal of aliases if queries are removed', function(t){
-  t.plan(1);
+test('removal of aliases if queries are removed', function(assert){
   var mq = new MQFacade({
     fooAlias: 'foo',
     barAlias: 'bar'
@@ -116,11 +116,11 @@ test('removal of aliases if queries are removed', function(t){
 
   mq.off('barAlias');
 
-  t.equals(mq.aliases.barAlias, undefined);
+  assert.equals(mq.aliases.barAlias, undefined);
+  assert.end();
 });
 
-test('removal of a single handler with a specific context for a query', function(t){
-  t.plan(1);
+test('removal of a single handler with a specific context for a query', function(assert){
   var mq = new MQFacade();
   var callback = function(){};
   var callbackTwo = function(){};
@@ -131,32 +131,32 @@ test('removal of a single handler with a specific context for a query', function
 
   mq.off('bar', callback, context);
 
-  t.deepEqual(mq.queries.bar.handlers, [
+  assert.deepEqual(mq.queries.bar.handlers, [
     { callback: callbackTwo, context: mq }
   ]);
+  assert.end();
 });
 
-test('removal of a query object if its last handler is removed', function(t){
-  t.plan(1);
+test('removal of a query object if its last handler is removed', function(assert){
   var mq = new MQFacade();
   var callback = function(){};
   mq.on('foo', callback);
 
   mq.off('foo', callback);
 
-  t.equals(mq.queries.foo, undefined);
+  assert.equals(mq.queries.foo, undefined);
+  assert.end();
 });
 
-test('attempting to remove a query that doesn\'t exist should throw an error', function(t){
-  t.plan(1);
+test('attempting to remove a query that doesn\'t exist should throw an error', function(assert){
   var mq = new MQFacade();
-  t.throws(function(){
+  assert.throws(function(){
     mq.off('bar');
   }, '"bar" is not registered');
+  assert.end();
 });
 
-test('only triggering event handlers when a media query is entered', function(t){
-  t.plan(1);
+test('only triggering event handlers when a media query is entered', function(assert){
   var mq = new MQFacade();
   var callCount = 0;
   var callback = function(){ callCount++; };
@@ -165,16 +165,17 @@ test('only triggering event handlers when a media query is entered', function(t)
   mq.queries.foo.listener();
   mq.queries.foo.listener();
 
-  t.equals(callCount, 1);
+  assert.equals(callCount, 1);
+  assert.end();
 });
 
-test('triggering a newly registered event handler if the query matches', function(t){
-  t.plan(1);
+test('triggering a newly registered event handler if the query matches', function(assert){
   var mq = new MQFacade();
   var callCount = 0;
   var callback = function(){ callCount++; };
   
   mq.on('all', callback);
 
-  t.equals(callCount, 1);
+  assert.equals(callCount, 1);
+  assert.end();
 });
