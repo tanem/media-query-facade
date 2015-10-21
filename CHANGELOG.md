@@ -1,3 +1,7 @@
+## v1.0.24 / 2015-10-21
+
+ * ([f44e9f3](https://github.com/tanem/media-query-facade/commit/f44e9f3a63d2351fc13f41c3389ec97761cce51c)) Use friendlier syntax in unit tests
+
 ## v1.0.23 / 2015-10-21
 
  * ([b4c281d](https://github.com/tanem/media-query-facade/commit/b4c281ddf5792ce45f076e6a36863d9cd6594d99)) Use eslint instead of jshint
