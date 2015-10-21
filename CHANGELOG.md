@@ -1,3 +1,7 @@
+## v1.0.23 / 2015-10-21
+
+ * ([b4c281d](https://github.com/tanem/media-query-facade/commit/b4c281ddf5792ce45f076e6a36863d9cd6594d99)) Use eslint instead of jshint
+
 ## v1.0.22 / 2015-10-21
 
  * ([182a5b5](https://github.com/tanem/media-query-facade/commit/182a5b522925996061a4db7f238ce2859114ee96)) Add .editorconfig
