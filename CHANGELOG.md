@@ -1,3 +1,7 @@
+## v1.0.25 / 2015-10-22
+
+ * ([4722fd6](https://github.com/tanem/media-query-facade/commit/4722fd6cafe21817167ef96433648d2fcac8e2f7)) Stop using problematic Opera version (fixes [#6](https://github.com/tanem/media-query-facade/issues/6))
+
 ## v1.0.24 / 2015-10-21
 
  * ([f44e9f3](https://github.com/tanem/media-query-facade/commit/f44e9f3a63d2351fc13f41c3389ec97761cce51c)) Use friendlier syntax in unit tests
