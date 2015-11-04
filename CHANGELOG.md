@@ -1,3 +1,7 @@
+## v1.0.26 / 2015-11-04
+
+ * ([8121a5e](https://github.com/tanem/media-query-facade/commit/8121a5e651226ee6b8f161b63a80d2c1b04c02e5)) Update README badge styles (fixes [#7](https://github.com/tanem/media-query-facade/issues/7))
+
 ## v1.0.25 / 2015-10-22
 
  * ([4722fd6](https://github.com/tanem/media-query-facade/commit/4722fd6cafe21817167ef96433648d2fcac8e2f7)) Stop using problematic Opera version (fixes [#6](https://github.com/tanem/media-query-facade/issues/6))
