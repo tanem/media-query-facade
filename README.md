@@ -1,16 +1,16 @@
 # media-query-facade
 
-Do stuff via JavaScript when the media queries on a document change. For efficiency it uses [window.matchMedia](https://developer.mozilla.org/en-US/docs/Web/API/Window.matchMedia) under the hood.
-
-[![NPM version](https://badge.fury.io/js/media-query-facade.svg)](http://badge.fury.io/js/media-query-facade)
-[![Dependency Status](https://david-dm.org/tanem/media-query-facade.png)](https://david-dm.org/tanem/media-query-facade)
-[![devDependency Status](https://david-dm.org/tanem/media-query-facade/dev-status.svg)](https://david-dm.org/tanem/media-query-facade#info=devDependencies)
+[![build status](https://img.shields.io/travis/tanem/media-query-facade/master.svg?style=flat-square)](https://travis-ci.org/tanem/media-query-facade)
+[![npm version](https://img.shields.io/npm/v/media-query-facade.svg?style=flat-square)](https://www.npmjs.com/package/media-query-facade)
+[![npm downloads](https://img.shields.io/npm/dm/media-query-facade.svg?style=flat-square)](https://www.npmjs.com/package/media-query-facade)
 
 [![Sauce Test Status](https://saucelabs.com/browser-matrix/media-query-facade.svg)](https://saucelabs.com/u/media-query-facade)
 
+Do stuff via JavaScript when the media queries on a document change. For efficiency it uses [window.matchMedia](https://developer.mozilla.org/en-US/docs/Web/API/Window.matchMedia) under the hood.
+
 ## Installation
 
-```sh
+```
 $ npm install media-query-facade --save
 ```
 
@@ -37,7 +37,7 @@ function changeColour(colour){
 
 There is also an example which uses [browserify](http://browserify.org) to make this work for the browser:
 
-```sh
+```
 $ npm run example
 ```
 
@@ -96,7 +96,7 @@ mq.off('(max-width: 400px)', function(){}, {});
 
 ## Testing
 
-```sh
+```
 $ npm run test-local
 ```
 
