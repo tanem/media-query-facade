@@ -1,3 +1,7 @@
+## 1.0.27 / 2016-01-21
+
+ * ([4192875](https://github.com/tanem/media-query-facade/commit/41928759a16eee1538656178fdc85334179f14cb)) Update license (closes [#9](https://github.com/tanem/media-query-facade/issues/9))
+
 ## v1.0.26 / 2015-11-04
 
  * ([8121a5e](https://github.com/tanem/media-query-facade/commit/8121a5e651226ee6b8f161b63a80d2c1b04c02e5)) Update README badge styles (fixes [#7](https://github.com/tanem/media-query-facade/issues/7))
