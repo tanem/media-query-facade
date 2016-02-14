@@ -28,19 +28,19 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "browserify": "^11.0.1",
-    "eslint": "^1.7.2",
+    "browserify": "^13.0.0",
+    "eslint": "^2.0.0",
     "opener": "^1.4.1",
-    "tape": "^4.2.0",
-    "zuul": "^3.6.0"
+    "tape": "^4.4.0",
+    "zuul": "^3.9.0"
   },
   "dependencies": {
-    "lodash.bind": "^3.1.0",
-    "lodash.foreach": "^3.0.3",
+    "lodash.bind": "^4.0.1",
+    "lodash.foreach": "^4.0.0",
     "lodash.isobject": "^3.0.2",
-    "lodash.isstring": "^3.0.1",
-    "lodash.merge": "^3.3.2",
-    "lodash.omit": "^3.1.0",
-    "lodash.some": "^3.2.3"
+    "lodash.isstring": "^4.0.1",
+    "lodash.merge": "^4.1.0",
+    "lodash.omitby": "^4.1.0",
+    "lodash.some": "^4.1.0"
   }
 }
