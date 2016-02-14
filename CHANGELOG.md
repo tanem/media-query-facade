@@ -1,4 +1,8 @@
-## 1.0.27 / 2016-01-21
+## v1.0.28 / 2016-02-15
+
+ * ([af4868a](https://github.com/tanem/media-query-facade/commit/af4868a3437fb17bc72de02adf918ef66661e3f6)) Add dependency badges (closes [#11](https://github.com/tanem/media-query-facade/issues/11))
+
+## v1.0.27 / 2016-01-21
 
  * ([4192875](https://github.com/tanem/media-query-facade/commit/41928759a16eee1538656178fdc85334179f14cb)) Update license (closes [#9](https://github.com/tanem/media-query-facade/issues/9))
 
