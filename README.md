@@ -3,6 +3,8 @@
 [![build status](https://img.shields.io/travis/tanem/media-query-facade/master.svg?style=flat-square)](https://travis-ci.org/tanem/media-query-facade)
 [![npm version](https://img.shields.io/npm/v/media-query-facade.svg?style=flat-square)](https://www.npmjs.com/package/media-query-facade)
 [![npm downloads](https://img.shields.io/npm/dm/media-query-facade.svg?style=flat-square)](https://www.npmjs.com/package/media-query-facade)
+[![dependency status](https://david-dm.org/tanem/media-query-facade.svg?style=flat-square)](https://david-dm.org/tanem/media-query-facade)
+[![devDependency status](https://david-dm.org/tanem/media-query-facade/dev-status.svg?style=flat-square)](https://david-dm.org/tanem/media-query-facade#info=devDependencies)
 
 [![Sauce Test Status](https://saucelabs.com/browser-matrix/media-query-facade.svg)](https://saucelabs.com/u/media-query-facade)
 
