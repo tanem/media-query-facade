@@ -12,7 +12,7 @@
     "url": "git://github.com/tanem/media-query-facade.git"
   },
   "scripts": {
-    "lint": "eslint lib/*.js test/*.js example/main.js index.js",
+    "lint": "standard lib/*.js test/*.js example/main.js index.js",
     "test-local": "npm run lint && zuul --local -- test/media-query-facade.test.js",
     "test": "npm run lint && zuul -- test/media-query-facade.test.js",
     "example": "browserify example/main.js > example/bundle.js && opener example/index.html"
@@ -29,8 +29,8 @@
   "license": "MIT",
   "devDependencies": {
     "browserify": "^13.0.0",
-    "eslint": "^2.0.0",
     "opener": "^1.4.1",
+    "standard": "^8.0.0",
     "tape": "^4.4.0",
     "zuul": "^3.9.0"
   },

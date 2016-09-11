@@ -1,1 +1,1 @@
-module.exports = require('./lib/media-query-facade.js');
+module.exports = require('./lib/media-query-facade.js')
