@@ -14,7 +14,7 @@
   "scripts": {
     "clean": "rimraf dist lib",
     "lint": "standard",
-    "test": "jest",
+    "test": "jest && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js || true",
     "start": "babel-node ./bin/start.js",
     "build:lib": "babel src -d lib",
     "build:umd": "babel-node ./bin/build.js umd",
@@ -40,6 +40,7 @@
     "babel-loader": "^6.2.10",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-env": "^1.1.4",
+    "coveralls": "^2.11.15",
     "jest": "^18.0.0",
     "matchmedia-polyfill": "tanem/matchMedia.js#6c0ba01",
     "standard": "^8.0.0",
@@ -56,6 +57,7 @@
     ]
   },
   "jest": {
+    "collectCoverage": true,
     "setupFiles": [
       "./node_modules/matchmedia-polyfill/matchMedia.js",
       "./node_modules/matchmedia-polyfill/matchMedia.addListener.js"

@@ -1,6 +1,7 @@
 # media-query-facade
 
 [![build status](https://img.shields.io/travis/tanem/media-query-facade/master.svg?style=flat-square)](https://travis-ci.org/tanem/media-query-facade)
+[![coverage status](https://img.shields.io/coveralls/tanem/media-query-facade.svg?style=flat-square)](https://coveralls.io/r/tanem/media-query-facade)
 [![npm version](https://img.shields.io/npm/v/media-query-facade.svg?style=flat-square)](https://www.npmjs.com/package/media-query-facade)
 [![npm downloads](https://img.shields.io/npm/dm/media-query-facade.svg?style=flat-square)](https://www.npmjs.com/package/media-query-facade)
 
