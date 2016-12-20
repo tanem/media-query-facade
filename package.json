@@ -2,7 +2,7 @@
   "name": "media-query-facade",
   "version": "1.0.33",
   "description": "A nicer JavaScript media query API.",
-  "main": "index.js",
+  "main": "lib/media-query-facade.js",
   "homepage": "https://github.com/tanem/media-query-facade",
   "bugs": {
     "url": "http://github.com/tanem/media-query-facade/issues"
@@ -12,10 +12,18 @@
     "url": "git://github.com/tanem/media-query-facade.git"
   },
   "scripts": {
-    "lint": "standard lib/*.js test/*.js example/main.js index.js",
-    "test-local": "npm run lint && zuul --local -- test/media-query-facade.test.js",
-    "test": "npm run lint && zuul -- test/media-query-facade.test.js",
-    "example": "browserify example/main.js > example/bundle.js && opener example/index.html"
+    "clean": "rimraf dist lib",
+    "lint": "standard",
+    "test": "jest",
+    "start": "babel-node ./bin/start.js",
+    "build:lib": "babel src -d lib",
+    "build:umd": "babel-node ./bin/build.js umd",
+    "build:umd:min": "babel-node ./bin/build.js umd:min",
+    "build": "npm run clean && npm run build:lib && npm run build:umd && npm run build:umd:min",
+    "preversion": "npm run lint && npm test",
+    "version": "npm run build",
+    "postversion": "git push && git push --tags && npm publish",
+    "release": "npm version -m 'Release v%s'"
   },
   "keywords": [
     "media",
@@ -28,19 +36,29 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "browserify": "^13.0.0",
-    "opener": "^1.4.1",
+    "babel-cli": "^6.18.0",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^1.1.4",
+    "jest": "^18.0.0",
+    "matchmedia-polyfill": "tanem/matchMedia.js#6c0ba01",
     "standard": "^8.0.0",
-    "tape": "^4.4.0",
-    "zuul": "^3.9.0"
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
-    "lodash.bind": "^4.0.1",
-    "lodash.foreach": "^4.0.0",
-    "lodash.isobject": "^3.0.2",
-    "lodash.isstring": "^4.0.1",
-    "lodash.merge": "^4.1.0",
-    "lodash.omitby": "^4.1.0",
-    "lodash.some": "^4.1.0"
+    "lodash": "^4.17.2"
+  },
+  "standard": {
+    "globals": [
+      "test",
+      "expect"
+    ]
+  },
+  "jest": {
+    "setupFiles": [
+      "./node_modules/matchmedia-polyfill/matchMedia.js",
+      "./node_modules/matchmedia-polyfill/matchMedia.addListener.js"
+    ]
   }
 }
