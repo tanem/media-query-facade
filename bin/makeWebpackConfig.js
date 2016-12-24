@@ -3,14 +3,6 @@ import webpack from 'webpack'
 
 export default function makeWebpackConfig (buildType) {
   const baseConfig = {
-    externals: {
-      lodash: {
-        root: '_',
-        commonjs: 'lodash',
-        commonjs2: 'lodash',
-        amd: 'lodash'
-      }
-    },
     module: {
       loaders: [
         {

@@ -1,13 +1,3 @@
-import {
-  isString,
-  isObject,
-  merge,
-  omitBy,
-  each,
-  some,
-  bind
-} from 'lodash'
-
 export default class MQFacade {
 
   constructor (aliases = {}) {
@@ -16,11 +6,15 @@ export default class MQFacade {
   }
 
   registerAlias (alias, query) {
-    if (isString(alias)) {
+    if (query) {
       this.aliases[alias] = query
       return
     }
-    if (isObject(alias)) merge(this.aliases, alias)
+
+    this.aliases = {
+      ...this.aliases,
+      ...alias
+    }
   }
 
   on (query, callback, context) {
@@ -36,17 +30,29 @@ export default class MQFacade {
   }
 
   off (query, callback, context) {
-    if (!arguments.length) return each(this.queries, bind(this._removeQueryObject, this), this)
-    if (!callback && !context) return this._removeQueryObject(query)
+    if (!arguments.length) {
+      return Object.keys(this.queries).forEach((key) => {
+        this._removeQueryObject(this.queries[key], key)
+      })
+    }
+
+    if (!callback && !context) {
+      return this._removeQueryObject(query)
+    }
+
     this._removeHandler(query, callback, context)
   }
 
   _removeAlias (query) {
-    this.aliases = omitBy(this.aliases, value => value === query)
+    Object.keys(this.aliases).forEach((alias) => {
+      if (this.aliases[alias] === query) {
+        delete this.aliases[alias]
+      }
+    })
   }
 
   _removeQueryObject (value, query) {
-    if (isString(value)) query = value
+    if (typeof value === 'string') query = value
     query = this.aliases[query] || query
     const queryObject = this._getQueryObject(query)
     queryObject.mql.removeListener(queryObject.listener)
@@ -55,9 +61,8 @@ export default class MQFacade {
   }
 
   _removeHandler (query, callback, context) {
-    const queryObject = this._getQueryObject(query)
-    const handlers = queryObject.handlers
-    some(handlers, (handler, i) => {
+    const {handlers} = this._getQueryObject(query)
+    handlers.some((handler, i) => {
       let match = handler.callback === callback
       if (context) match = handler.context === context
       if (match) return handlers.splice(i, 1)
@@ -69,7 +74,9 @@ export default class MQFacade {
     query = this.aliases[query] || query
     const queryObject = { handlers: [] }
     const mql = queryObject.mql = window.matchMedia(query)
-    const listener = queryObject.listener = bind(this._triggerHandlers, this, queryObject)
+    const listener = queryObject.listener = () => {
+      this._triggerHandlers(queryObject)
+    }
     queryObject.isActive = mql.matches
     mql.addListener(listener)
     this.queries[query] = queryObject
@@ -85,7 +92,7 @@ export default class MQFacade {
   _triggerHandlers (queryObject) {
     const isActive = queryObject.isActive = !queryObject.isActive
     if (!isActive) return
-    each(queryObject.handlers, this._triggerHandler)
+    queryObject.handlers.forEach(this._triggerHandler)
   }
 
   _triggerHandler (handler) {

@@ -10,7 +10,7 @@
 ## Usage
 
 ```js
-import MQFacade from '../src/media-query-facade'
+import MQFacade from 'media-query-facade'
 
 const mq = new MQFacade({
   small: 'only screen and (max-width: 480px)',
@@ -91,8 +91,6 @@ There are also UMD builds available via unpkg:
 
 - https://unpkg.com/media-query-facade/dist/media-query-facade.js
 - https://unpkg.com/media-query-facade/dist/media-query-facade.min.js
-
-If you use these, make sure you have already included [Lodash](https://lodash.com/) as a dependency.
 
 ## License
 
